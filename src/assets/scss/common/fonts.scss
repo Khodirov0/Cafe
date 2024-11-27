@@ -1,0 +1,17 @@
+$Jost: 
+("Jost-Regular", 400),
+("Jost-Medium", 500),
+("Jost-SemiBold", 600),
+("Jost-ExtraBold", 800);
+
+
+
+@each $name,
+$weight in $Jost {
+    @font-face {
+        font-family: "Jost";
+        font-weight: $weight;
+        src: url(@/assets/fonts/Jost/#{$name}.ttf);
+    }
+}
+

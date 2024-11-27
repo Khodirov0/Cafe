@@ -1,0 +1,93 @@
+@use '@/assets/scss/common/common.scss';
+
+.intro {
+    position: relative;
+
+    overflow: hidden;
+    background: #EEEFF1;
+    padding: 130px 0;
+
+    @include common.media(992) {
+        padding: 80px 0;
+    }
+
+    &__item {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include common.media(992) {
+            flex-direction: column;
+            justify-content: center;
+            
+        }
+
+
+        &-left {
+            padding-bottom: 30px;
+            max-width: 400px;
+
+            &-title {
+                font-size: 124px;
+                font-weight: 800;
+                line-height: 1.2;
+                text-align: left;
+                color: #1B1B1D;
+                position: relative;
+
+
+                &::after {
+                    content: url(@/assets/images/header__icon.png);
+                    position: absolute;
+                    right: -70px;
+                }
+
+                @include common.media(1250) {
+                    font-size: 80px;
+                    font-weight: 700;
+
+                    &::after {
+
+                        left: 240px;
+                    }
+                }
+
+
+            }
+
+            &-txt {
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 1.4;
+                text-align: left;
+                color: #64646A;
+                padding: 30px 0;
+
+                @include common.media(1250) {
+                    font-size: 18px;
+                    text-align: center;
+                }
+
+            }
+
+            &-btns {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                column-gap: 30px;
+                margin-top: 30px;
+            }
+        }
+
+        &-right img {
+            @include common.media(1250) {
+                max-width: 500px;
+            }
+            @include common.media(992) {
+                max-width: 400px;
+            }
+        }
+
+    }
+}
